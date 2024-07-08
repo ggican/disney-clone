@@ -14,7 +14,7 @@
     "lint-staged": "lint-staged",
     "format": "prettier --check .",
     "format:fix": "prettier --write --list-different .",
-    "prepare": "husky",
+    "prepare": "husky install",
     "lint:js": "next lint",
     "lint:css": "stylelint \"**/*.scss\"",
     "type-check": "tsc --pretty --noEmit",
