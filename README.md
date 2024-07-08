@@ -1,25 +1,31 @@
-[![codecov](https://codecov.io/github/ggican/book-list/graph/badge.svg?token=h0lxGriZwn)](https://codecov.io/github/ggican/book-list)
+# SIMPLE DISNEY PLUS CLONE
 
-## Getting Started
+## Features
 
-First, run the development server:
+- search page split by 2 group series and movie
+- home page with split many sections
+- detail series
+- detail movie
+- watch list movie
+- watch list movie can click every card and detail
+- Export documents as Markdown, HTML and PDF
 
-use Node version v20.10.0 for recommended
+## LIBRARY
 
-```bash
-NEXT_PUBLIC_BASE_API=https://my-json-server.typicode.com/cutamar/mock
-NEXT_PUBLIC_API_MOCKING=enabled | disabled # for using mocking or not
-```
+- storybook
+- eslint
+- prettier
+- husky
+- msw
+- ant design icons
+- swipper slider
+- styled components
+- typescript
+- next JS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Domain & Link
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-can open this project from this [LINK](https://book-list-sigma-three.vercel.app/)
+Domain and link for website
+
+- [Story Book](https://disney-clone-ui-kit.vercel.app/) - Try To Create UI KIT
+- [Disney Clone](https://disney-clone-sigma-lake.vercel.app/) - Try To Create UI KIT
