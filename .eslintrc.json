@@ -35,7 +35,7 @@
       }
     ]
   },
-  "ignorePatterns": ["!.storybook", "jest.polyfills.js", "src/libs/*"],
+  "ignorePatterns": ["!.storybook", "jest.polyfills.js", "src/lib/*"],
   "settings": {
     "import/resolver": {
       "typescript": {

@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, mswServer, render, screen, waitFor } from "@import/libs/test-utils";
+import { cleanup, fireEvent, mswServer, render, screen, waitFor } from "@import/lib/test-utils";
 
 import Home from "./page";
 

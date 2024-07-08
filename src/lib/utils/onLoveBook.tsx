@@ -1,4 +1,4 @@
-import localForage from "@import/libs/storage/localStorage";
+import localForage from "@import/lib/storage/localStorage.js";
 import { TBook } from "@import/types/book.types";
 
 export async function onLoveBook({

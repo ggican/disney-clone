@@ -1,4 +1,4 @@
-import { mswServer } from "@import/libs/test-utils";
+import { mswServer } from "@import/lib/test-utils";
 /* Jest custom matchers
 https://github.com/testing-library/jest-dom */
 import "@testing-library/jest-dom";

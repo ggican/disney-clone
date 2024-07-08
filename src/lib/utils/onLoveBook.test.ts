@@ -1,6 +1,6 @@
 // onLoveBook.test.js
 
-import localForage from "@import/libs/mocks/localForage"; // Adjust import path as per your project
+import localForage from "@import/lib/mocks/localForage"; // Adjust import path as per your project
 
 import { onLoveBook } from "./onLoveBook";
 

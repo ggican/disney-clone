@@ -1,4 +1,4 @@
-import { ValueWishList } from "#src/providers/LandingPageProviders.jsx";
+import { ValueWishList } from "@import/providers/LandingPageProviders.jsx";
 
 export type IMovieCardProps = {
   adult: boolean;

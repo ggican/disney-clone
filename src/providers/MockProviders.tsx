@@ -20,7 +20,7 @@ export function MockProvider({
        * this module and runs it during the build
        * in Node.js. This makes "msw/browser" import to fail.
        */
-      const { worker } = await import("@import/libs/mocks/msw-browser");
+      const { worker } = await import("@import/lib/mocks/msw-browser");
       await worker.start({
         onUnhandledRequest: "bypass",
       });

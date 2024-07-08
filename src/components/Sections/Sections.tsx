@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { ValueWishList } from "#src/providers/LandingPageProviders.jsx";
+import { ValueWishList } from "@import/providers/LandingPageProviders";
 
 import SectionsStyles from "./Sections.styles";
 import { ISectionsProps } from "./Sections.type";

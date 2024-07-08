@@ -1,5 +1,5 @@
 import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import SearchBoxStyles from "./SearchBox.styles";
 import { ISearchBoxProps } from "./SearchBox.types";
@@ -7,16 +7,7 @@ import { ISearchBoxProps } from "./SearchBox.types";
 const SearchBox = (props: ISearchBoxProps) => {
   const { placeholder, name, value, onSearch } = props;
   const inputRef = useRef<HTMLInputElement>(null);
-  const [isFocus, setFocus] = useState<boolean>(false);
   const [isCloseButton, setCloseButton] = useState<boolean>(false);
-
-  useLayoutEffect(() => {});
-  const handleOnFocus = () => {
-    setFocus(true);
-  };
-  const onBlur = () => {
-    setFocus(false);
-  };
 
   const onCheckValue = (value: string): void => {
     if (value.length > 2) {
@@ -24,10 +15,10 @@ const SearchBox = (props: ISearchBoxProps) => {
     } else {
       setCloseButton(false);
     }
-    onSearch(value);
   };
 
   const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSearch(String(e.target.value));
     onCheckValue(String(e.target.value));
   };
 
@@ -38,6 +29,10 @@ const SearchBox = (props: ISearchBoxProps) => {
     setCloseButton(false);
   };
 
+  useEffect(() => {
+    onCheckValue(value);
+  }, [value]);
+
   return (
     <SearchBoxStyles>
       <div className="search-box--icon left">
@@ -47,8 +42,6 @@ const SearchBox = (props: ISearchBoxProps) => {
         <input
           defaultValue={value}
           onChange={handleChangeValue}
-          onFocus={handleOnFocus}
-          onBlur={onBlur}
           ref={inputRef}
           type="text"
           name={name}

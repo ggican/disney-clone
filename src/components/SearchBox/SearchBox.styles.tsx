@@ -20,6 +20,8 @@ const SearchBoxStyles = styled.div`
       outline: none;
       border: none;
       cursor: pointer;
+      color: #fff;
+      font-size: 24px;
       &.left {
         left: 20px;
       }

@@ -7,7 +7,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import Grid, { GridCol } from "@import/components/Grid";
 import MovieCard from "@import/components/MovieCard";
 import SearchBox from "@import/components/SearchBox";
-import debounce from "@import/libs/utils/debounce";
+import debounce from "@import/lib/utils/debounce";
 import { ValueWishList, useLandingPageContext } from "@import/providers/LandingPageProviders";
 import { getExploreService } from "@import/services/explore-service";
 
