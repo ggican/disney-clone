@@ -41,6 +41,13 @@ const SearchBoxStyles = styled.div`
         color: #fff;
         font-size: 20px;
         font-weight: 500;
+        &:-webkit-autofill {
+          background-color: #262833;
+        }
+
+        &:-webkit-autofill:focus {
+          background-color: #262833;
+        }
       }
     }
   }
