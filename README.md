@@ -13,6 +13,7 @@
 ## LIBRARY
 
 - storybook
+- useQuery
 - eslint
 - prettier
 - husky
