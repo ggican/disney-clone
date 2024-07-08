@@ -28,7 +28,7 @@ function ExplorePageElement() {
     series: [],
   });
   const { data, isLoading }: any = useQuery({
-    queryKey: ["hydrate-users", searchValue],
+    queryKey: ["explore-list-search", searchValue],
     queryFn: () => getExploreService(searchValue),
   });
 
@@ -59,6 +59,7 @@ function ExplorePageElement() {
     <div className="container">
       <ExploreStyles>
         <SearchBox
+          data-testid="test-id-search-bar"
           onSearch={handleOnSearch}
           value={searchValue}
           placeholder="Movies, shows and more"
@@ -77,7 +78,7 @@ function ExplorePageElement() {
                   poster_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.poster_path}`,
                 };
                 return (
-                  <GridCol key={key} lg={2} sm={2} xs={2} md={2}>
+                  <GridCol className="test-id-movie" key={key} lg={2} sm={2} xs={2} md={2}>
                     <MovieCard
                       key={key}
                       {...result}
@@ -103,7 +104,7 @@ function ExplorePageElement() {
                   poster_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.poster_path}`,
                 };
                 return (
-                  <GridCol key={key} lg={2} sm={2} xs={2} md={2}>
+                  <GridCol className="test-id-series" key={key} lg={2} sm={2} xs={2} md={2}>
                     <MovieCard
                       key={key}
                       {...result}

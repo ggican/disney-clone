@@ -45,8 +45,8 @@ const GridStyle = styled.div<any>`
   @media (max-width: 550px) {
     ${createCSS("xs", COLUMN_COUNT)};
   }
-  ${({ marginBottom }) =>
-    marginBottom &&
+  ${({ marginbottom }) =>
+    marginbottom === "true" &&
     `
          margin-bottom:15px;
   `}

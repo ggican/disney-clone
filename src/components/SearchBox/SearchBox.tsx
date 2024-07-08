@@ -41,6 +41,8 @@ const SearchBox = (props: ISearchBoxProps) => {
       </div>
       <div className="search-box--input">
         <input
+          data-testid="input-search-form"
+          className="search-box-input-element"
           defaultValue={value}
           onChange={handleChangeValue}
           ref={inputRef}
@@ -50,7 +52,12 @@ const SearchBox = (props: ISearchBoxProps) => {
         />
       </div>
       {isCloseButton && (
-        <button type="button" onClick={handleCloseButton} className="search-box--icon right">
+        <button
+          type="button"
+          onClick={handleCloseButton}
+          data-testid="close-search-form"
+          className="search-box--icon right"
+        >
           <CloseOutlined />
         </button>
       )}

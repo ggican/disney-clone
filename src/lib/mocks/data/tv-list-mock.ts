@@ -2,7 +2,7 @@ export const TVListMock = {
   page: 1,
   results: [
     {
-      adult: false,
+      adult: true,
       backdrop_path: "/hib8MpBPU7GdluS38htXCF4uw0c.jpg",
       genre_ids: [80, 18, 9648],
       id: 2734,

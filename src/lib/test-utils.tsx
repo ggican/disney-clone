@@ -5,6 +5,7 @@ import type { FC, ReactElement } from "react";
 import React, { useState } from "react";
 
 import { TChildrenElement } from "@import/types/react.types";
+import { LandingPageProvider } from "@import/providers/LandingPageProviders";
 
 /* React Testing Library */
 
@@ -12,7 +13,11 @@ import { TChildrenElement } from "@import/types/react.types";
 const AllTheProviders: FC<any> = ({ children }: TChildrenElement) => {
   const [queryClient] = useState(() => new QueryClient());
   // wrap children with other providers that you may use, e.g. react-query <QueryClientProvider>
-  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <LandingPageProvider>{children}</LandingPageProvider>
+    </QueryClientProvider>
+  );
 };
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "wrapper">) =>

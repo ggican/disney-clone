@@ -16,7 +16,6 @@ export interface GridProps {
     | "initial";
   className?: string;
   flexWrap?: string;
-  withPaddingBottom?: boolean;
   marginBottom?: boolean;
 }
 
@@ -26,13 +25,11 @@ const Grid = ({
   justify = "flex-start",
   flexWrap = "wrap",
   className = "",
-  withPaddingBottom = false,
   marginBottom = false,
 }: GridProps) => {
   return (
     <GridStyle
-      withPaddingBottom={withPaddingBottom}
-      marginBottom={marginBottom}
+      marginbottom={marginBottom?.toString()}
       className={className}
       align={align}
       justify={justify}
