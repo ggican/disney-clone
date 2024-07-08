@@ -64,7 +64,7 @@ export default function MovieElement({ defaultData, id }: any) {
       <SeriesElementStyles>
         <div
           style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${data?.data?.backdrop_path})`,
+            backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGE}${data?.data?.backdrop_path})`,
           }}
           className="parallax"
         ></div>

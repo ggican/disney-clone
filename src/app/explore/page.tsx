@@ -72,8 +72,8 @@ function ExplorePageElement() {
               {onCheckWatchList(splitData?.movies)?.map((item: any, key: number) => {
                 const result = {
                   ...item,
-                  backdrop_path: `https://image.tmdb.org/t/p/original${item?.backdrop_path}`,
-                  poster_path: `https://image.tmdb.org/t/p/original${item?.poster_path}`,
+                  backdrop_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.backdrop_path}`,
+                  poster_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.poster_path}`,
                 };
                 return (
                   <GridCol key={key} lg={2} sm={2} xs={2} md={2}>
@@ -98,8 +98,8 @@ function ExplorePageElement() {
               {onCheckWatchList(splitData?.series)?.map((item: any, key: number) => {
                 const result = {
                   ...item,
-                  backdrop_path: `https://image.tmdb.org/t/p/original${item?.backdrop_path}`,
-                  poster_path: `https://image.tmdb.org/t/p/original${item?.poster_path}`,
+                  backdrop_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.backdrop_path}`,
+                  poster_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.poster_path}`,
                 };
                 return (
                   <GridCol key={key} lg={2} sm={2} xs={2} md={2}>

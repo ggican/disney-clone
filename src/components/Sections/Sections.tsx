@@ -30,8 +30,8 @@ const Sections = ({ title, viewUrl, data, type, onWishList }: ISectionsProps) =>
           {data?.map((item: IMovieCardProps, key: number) => {
             const result = {
               ...item,
-              backdrop_path: `https://image.tmdb.org/t/p/original${item?.backdrop_path}`,
-              poster_path: `https://image.tmdb.org/t/p/original${item?.poster_path}`,
+              backdrop_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.backdrop_path}`,
+              poster_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.poster_path}`,
             };
             return (
               <SwiperSlide key={key}>

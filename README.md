@@ -29,4 +29,12 @@
 Domain and link for website
 
 - [Story Book](https://disney-clone-ui-kit.vercel.app/) - Try To Create UI KIT
-- [Disney Clone](https://disney-clone-sigma-lake.vercel.app/) - Try To Create UI KIT
+- [Disney Clone](https://disney-clone-sigma-lake.vercel.app/) - Website
+
+## ENV
+
+```
+NEXT_PUBLIC_BASE_API=https://api.themoviedb.org/3
+NEXT_PUBLIC_TOKEN=#
+NEXT_PUBLIC_IMAGE=https://image.tmdb.org/t/p/original
+```

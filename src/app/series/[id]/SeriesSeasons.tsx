@@ -29,7 +29,7 @@ export default function SeriesSeason({ seasonNumber, id }: any) {
                       width={200}
                       objectFit="cover"
                       alt={item?.name || item?.original_name || "movie-data"}
-                      src={`https://image.tmdb.org/t/p/original${item?.still_path}`}
+                      src={`${process.env.NEXT_PUBLIC_IMAGE}${item?.still_path}`}
                     />
                   </div>
                 </div>
