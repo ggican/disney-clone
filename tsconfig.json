@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@import/*": ["./src/*"]
+    },
+    "target": "es5",
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "types": ["jest", "node", "@testing-library/jest-dom"]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/providers/tanstackQueryProviders.tsx",
+    "jest.setup.js",
+    "jest.polyfills.js",
+    "jest.polyfills.js",
+    "jest.config.js",
+    "commitlint.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}

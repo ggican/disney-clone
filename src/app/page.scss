@@ -1,0 +1,14 @@
+@import "../components/styles/variables.module";
+
+.load-more {
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    height: 48px;
+    font-size: 16px;
+    background-color: $color-dark-soft;
+    color: #f9f9f9;
+    outline: none;
+    border-radius: 4px;
+    border: 0;
+}

@@ -1,0 +1,64 @@
+@import "../styles/_variables.module.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+    color: $color-dark-soft;
+    margin: 0;
+}
+
+@for $i from 1 through 9 {
+    $result: $i * 100;
+    .font-#{$result} {
+        font-weight: #{$result};
+    }
+}
+
+@for $fontSize from 1 through 60 {
+    .font-size-#{$fontSize} {
+        font-size: #{$fontSize}px;
+    }
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+@for $line from 1 through 60 {
+    .text-ellipsis-#{$line} {
+        @include text-ellipsis;
+        -webkit-line-clamp: #{$line};
+    }
+}
+
+$aligns: "start", "end", "left", "right", "center", "justify";
+
+@each $align in $aligns {
+    .text-align-#{$align} {
+        text-align: #{$align};
+    }
+}
+
+$colors: "gray-dark", "dark-soft", "light";
+
+@each $color in $colors {
+    .text-#{$color} {
+        color: #{map-get(
+                (
+                    "gray-dark": $color-gray-dark,
+                    "dark-soft": $color-gray,
+                    "light": $color-gray-light
+                ),
+                $color
+            )};
+    }
+}

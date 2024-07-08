@@ -1,0 +1,81 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.validate": ["typescript"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "workbench.colorTheme": "Monokai",
+  "workbench.colorCustomizations": {
+    "titleBar.border": "#0e0f10",
+    "list.activeSelectionBackground": "#0e0f10",
+    "list.inactiveSelectionBackground": "#161a1d",
+    "tab.inactiveBackground": "#111213",
+    "editorGroupHeader.tabsBackground": "#0e0f10",
+    "editorGroupHeader.noTabsBackground": "#0e0f10",
+    "activityBar.background": "#0e0f10",
+    "sideBar.background": "#0e0f10",
+    "sideBarSectionHeader.background": "#0e0f10",
+    "activityBar.border": "#0b1015",
+    "tab.border": "#0b1015",
+    "panel.border": "#0e0f10",
+    "statusBar.border": "#0e0f10",
+    "editor.background": "#1b1e23"
+  },
+  "vsicons.associations.files": [
+    {
+      "icon": "css",
+      "extensions": ["style.js", "styles.js", "styles.tsx"],
+      "format": "svg"
+    },
+    {
+      "icon": "next",
+      "extensions": ["next.config.mjs"],
+      "filename": true,
+      "light": true,
+      "format": "svg"
+    },
+    {
+      "icon": "jest",
+      "extensions": ["jest.polyfills.js", "jest.setup.js", "jestGlobalSetup.js"],
+      "filename": true,
+      "light": true,
+      "format": "svg"
+    },
+    {
+      "icon": "typescript",
+      "extensions": ["types.tsx", "types.ts"],
+      "format": "svg"
+    },
+    {
+      "icon": "config",
+      "extensions": [".env"],
+      "format": "svg",
+      "filename": true,
+      "filenamesGlob": [".env"],
+      "extensionsGlob": ["production", "local", "test"],
+      "light": true
+    }
+  ],
+  "vsicons.associations.folders": [
+    {
+      "icon": "component",
+      "extensions": ["components"],
+      "format": "svg"
+    },
+    {
+      "icon": "hook",
+      "extensions": ["hooks"],
+      "format": "svg"
+    },
+    {
+      "icon": "view",
+      "extensions": ["app"],
+      "format": "svg"
+    },
+    {
+      "icon": "api",
+      "extensions": ["services"],
+      "format": "svg"
+    }
+  ]
+}
