@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import Button from "@import/components/Button";
 import { useLandingPageContext } from "@import/providers/LandingPageProviders";
 import { getDetailService } from "@import/services/detail-service";
+import { IGenres, ISeasons } from "@import/types/general.types";
 
 import SeriesElementStyles from "./SeriesElement.styles";
 import SeriesSeason from "./SeriesSeasons";
@@ -101,7 +102,7 @@ export default function SeriesElement({ defaultData, id }: any) {
                 <p>{data?.data?.overview}</p>
               </div>
               <div className="content-detail--genres">
-                {data?.data?.genres.map((item: any, key: number) => {
+                {data?.data?.genres.map((item: IGenres, key: number) => {
                   return <span key={key}>{item?.name}</span>;
                 })}
               </div>
@@ -132,7 +133,7 @@ export default function SeriesElement({ defaultData, id }: any) {
           <div className="container">
             <div className="season-content">
               <ul className="season-list">
-                {data?.data?.seasons.map((item: any, key: number) => {
+                {data?.data?.seasons.map((item: ISeasons, key: number) => {
                   return (
                     <li key={key}>
                       <button

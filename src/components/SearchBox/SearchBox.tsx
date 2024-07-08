@@ -1,5 +1,5 @@
 import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import SearchBoxStyles from "./SearchBox.styles";
 import { ISearchBoxProps } from "./SearchBox.types";

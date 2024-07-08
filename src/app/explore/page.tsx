@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useState } from "react";
 
+import { IMovieCardProps } from "#src/components/MovieCard/MovieCard.types.jsx";
 import Grid, { GridCol } from "@import/components/Grid";
 import MovieCard from "@import/components/MovieCard";
 import SearchBox from "@import/components/SearchBox";
@@ -33,8 +34,8 @@ function ExplorePageElement() {
 
   const handleOnSplitData = () => {
     setSplitData({
-      movies: data?.data?.results.filter((item: any) => item?.media_type === "movie"),
-      series: data?.data?.results.filter((item: any) => item?.media_type === "tv"),
+      movies: data?.data?.results.filter((item: IMovieCardProps) => item?.media_type === "movie"),
+      series: data?.data?.results.filter((item: IMovieCardProps) => item?.media_type === "tv"),
     });
   };
 
@@ -69,7 +70,7 @@ function ExplorePageElement() {
               <h2>Movies Results</h2>
             </div>
             <Grid marginBottom={true}>
-              {onCheckWatchList(splitData?.movies)?.map((item: any, key: number) => {
+              {onCheckWatchList(splitData?.movies)?.map((item: IMovieCardProps, key: number) => {
                 const result = {
                   ...item,
                   backdrop_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.backdrop_path}`,
@@ -95,7 +96,7 @@ function ExplorePageElement() {
               <h2>Series Results</h2>
             </div>
             <Grid marginBottom={true}>
-              {onCheckWatchList(splitData?.series)?.map((item: any, key: number) => {
+              {onCheckWatchList(splitData?.series)?.map((item: IMovieCardProps, key: number) => {
                 const result = {
                   ...item,
                   backdrop_path: `${process.env.NEXT_PUBLIC_IMAGE}${item?.backdrop_path}`,

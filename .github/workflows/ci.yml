@@ -13,13 +13,6 @@ jobs:
       matrix:
         node-version: [20.x]
     steps:
-      - uses: chromaui/action@v1
-        env:
-          #👇 the location of mocked fonts to use
-          NEXT_FONT_GOOGLE_MOCKED_RESPONSES: ${{ github.workspace }}/mocked-google-fonts.js
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:

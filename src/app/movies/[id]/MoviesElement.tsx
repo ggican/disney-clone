@@ -8,6 +8,7 @@ import React from "react";
 import Button from "@import/components/Button";
 import { useLandingPageContext } from "@import/providers/LandingPageProviders";
 import { getDetailService } from "@import/services/detail-service";
+import { IGenres } from "@import/types/general.types";
 
 import SeriesElementStyles from "./MoviesElement.styles";
 
@@ -84,7 +85,7 @@ export default function MovieElement({ defaultData, id }: any) {
                 <p>{data?.data?.overview}</p>
               </div>
               <div className="content-detail--genres">
-                {data?.data?.genres.map((item: any, key: number) => {
+                {data?.data?.genres.map((item: IGenres, key: number) => {
                   return <span key={key}>{item?.name}</span>;
                 })}
               </div>

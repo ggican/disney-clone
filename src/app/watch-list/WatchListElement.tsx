@@ -27,7 +27,7 @@ export default function WatchListElement() {
                 };
                 return (
                   <GridCol key={key} lg={2} sm={2} xs={2} md={2}>
-                    <MovieCard type="movies" key={key} {...result}></MovieCard>
+                    <MovieCard key={key} {...result}></MovieCard>
                   </GridCol>
                 );
               })}
