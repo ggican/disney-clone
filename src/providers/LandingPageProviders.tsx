@@ -58,44 +58,29 @@ const LandingPageProvider: React.FC<LandingPageProvidersProps> = ({ children }) 
     }
   }, []);
 
-  const onSetValueLove = (newWishList: any): void => {
-    setLocalWishList(newWishList);
+  const updateLocalStorage = (newWishList: ValueWishList[]): void => {
     localStorage.setItem(KEY_STORAGE, JSON.stringify(newWishList));
+    setLocalWishList(newWishList);
   };
 
   const onWishList = (values: ValueWishList): void => {
-    const localData = localStorage.getItem(KEY_STORAGE) || "[]";
-    const wishListDataFromStorage = JSON.parse(localData) || [];
-    const currentLove: ValueWishList[] = wishListDataFromStorage;
-    if (currentLove.length > 0) {
-      if (!values?.status) {
-        const result = currentLove?.filter((item: ValueWishList) => values?.id !== item?.id);
-        onSetValueLove(result);
-      } else {
-        onSetValueLove([...currentLove, values]);
-      }
-    } else {
-      onSetValueLove([...currentLove, values]);
-    }
+    const updatedWishList = values.status
+      ? [...localWhishList, values]
+      : localWhishList.filter((item) => item.id !== values.id);
+    updateLocalStorage(updatedWishList);
   };
 
   const onGetDataById = (id: number): boolean => {
-    const haveSameData = localWhishList?.find((item: ValueWishList) => id === item?.id) || false;
-    if (haveSameData) {
-      return true;
-    }
-    return false;
+    return localWhishList.some((item) => item.id === id);
   };
 
   const mergeDataWithWatchList = (listSeriesAndMovie: ValueWishList[]): ValueWishList[] => {
-    const currentLocal = localWhishList || [];
-    if (currentLocal.length > 0 && listSeriesAndMovie && listSeriesAndMovie.length > 0) {
+    if (listSeriesAndMovie && listSeriesAndMovie.length > 0 && localWhishList?.length > 0) {
       return listSeriesAndMovie.map((item) => {
-        const item2 = currentLocal.find((i2) => i2.id === item.id);
-        return item2 ? { ...item, ...item2 } : item;
+        const localItem = localWhishList.find((local) => local.id === item.id);
+        return localItem ? { ...item, ...localItem } : item;
       });
     }
-
     return listSeriesAndMovie;
   };
 
