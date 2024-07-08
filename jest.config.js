@@ -38,10 +38,10 @@ const config = {
     "!**/node_modules/**",
   ],
   coveragePathIgnorePatterns: [
-    "src/libs/test-utils.tsx",
-    "src/libs/services/*",
-    "src/libs/types/*",
-    "src/libs/mocks/*",
+    "src/lib/test-utils.tsx",
+    "src/lib/services/*",
+    "src/lib/types/*",
+    "src/lib/mocks/*",
   ],
 
   // Indicates which provider should be used to instrument code for coverage

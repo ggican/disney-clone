@@ -9,7 +9,7 @@ import Sidebar from "../components/Sidebar";
 import Providers from "../providers/tanstackQueryProviders";
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
-  require("@import/libs/mocks/msw-init");
+  require("@import/lib/mocks/msw-init");
 }
 
 const MulishFont = Mulish({

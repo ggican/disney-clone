@@ -26,6 +26,7 @@ const SearchBox = (props: ISearchBoxProps) => {
     if (inputRef.current) {
       inputRef.current.value = "";
     }
+    onSearch("");
     setCloseButton(false);
   };
 
