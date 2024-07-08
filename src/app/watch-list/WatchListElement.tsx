@@ -8,8 +8,6 @@ import { useLandingPageContext } from "@import/providers/LandingPageProviders";
 
 import WatchLisStyles from "./WatchList.styles";
 
-export const DEBOUNCE_DEFAULT_DELAY = 200;
-
 export default function WatchListElement() {
   const { localWhishList } = useLandingPageContext();
   return (

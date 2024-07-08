@@ -43,7 +43,7 @@ export default function SeriesElement({ defaultData, id }: any) {
     if (!isLoading) {
       setDisplaySeasonNumber(data?.data?.seasons[0]?.season_number);
     }
-  }, [isLoading]);
+  }, [isLoading, data?.data?.seasons]);
 
   const handleDisplaySeason = (value: number) => {
     setDisplaySeasonNumber(value);

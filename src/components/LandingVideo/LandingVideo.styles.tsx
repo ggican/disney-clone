@@ -6,7 +6,43 @@ const LandingVideoStyles = styled.div<ILandingVideoProps>`
   width: 100%;
   display: block;
   height: ${(p) => p.height || "100vh"};
-  video {
+  .parallax {
+    background-image: url("https://image.tmdb.org/t/p/original/9faGSFi5jam6pDWGNd0p8JcJgXQ.jpg");
+    min-height: 100vh;
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right top, #101115, rgba(16, 17, 21, 0));
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right top, #101115, rgba(16, 17, 21, 0));
+    }
+  }
+  .video {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: fill;
+    position: relative;
+  }
+  img {
     height: 100%;
     width: 100%;
     display: block;
@@ -120,6 +156,15 @@ const LandingVideoStyles = styled.div<ILandingVideoProps>`
       .left {
         button {
           margin-bottom: 20px;
+        }
+      }
+      .right {
+        button {
+          margin-bottom: 20px;
+          height: 48.25px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }

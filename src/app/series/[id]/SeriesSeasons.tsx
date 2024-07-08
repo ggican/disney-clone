@@ -9,8 +9,6 @@ import { getDetailSeasonService } from "@import/services/detail-service";
 
 import SeriesElementStyles from "./SeriesElement.styles";
 
-export const DEBOUNCE_DEFAULT_DELAY = 200;
-
 export default function SeriesSeason({ seasonNumber, id }: any) {
   const { data }: any = useQuery({
     queryKey: ["tv-series-season", seasonNumber, id],

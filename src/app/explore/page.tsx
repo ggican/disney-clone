@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import Grid, { GridCol } from "@import/components/Grid";
 import MovieCard from "@import/components/MovieCard";
@@ -13,9 +13,9 @@ import { getExploreService } from "@import/services/explore-service";
 
 import ExploreStyles from "./Explore.styles";
 
-export const DEBOUNCE_DEFAULT_DELAY = 200;
+const DEBOUNCE_DEFAULT_DELAY = 350;
 
-export default function ExplorePage() {
+function ExplorePageElement() {
   const { onWishList, onCheckWatchList } = useLandingPageContext();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -41,7 +41,7 @@ export default function ExplorePage() {
   const handleOnSearch = debounce((value: string) => {
     router.push(`/explore?query=${value}`);
     setSearchValue(value);
-  }, 500);
+  }, DEBOUNCE_DEFAULT_DELAY);
 
   useEffect(() => {
     if (!isLoading) {
@@ -117,5 +117,13 @@ export default function ExplorePage() {
         )}
       </ExploreStyles>
     </div>
+  );
+}
+
+export default function ExplorePage() {
+  return (
+    <Suspense>
+      <ExplorePageElement />
+    </Suspense>
   );
 }

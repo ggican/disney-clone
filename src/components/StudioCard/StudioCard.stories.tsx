@@ -13,10 +13,9 @@ const meta: Meta<typeof StudioCard> = {
 export default meta;
 type Story = StoryObj<typeof StudioCard>;
 
-export const MovieCardPrimary: Story = {
+export const StudioCardDefault: Story = {
   args: {
-    image: <Image alt="image" fill style={{ objectFit: "cover" }} src="/disney.jpg" />,
-    title: "",
+    image: "",
     video: "/video-disney.mp4",
   },
 };

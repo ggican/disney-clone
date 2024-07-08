@@ -19,7 +19,7 @@ const Sidebar = (props: ISidebarProps) => {
   const currentPath = usePathname();
   const [isNavHover, setIsNavHover] = useState<boolean>(false);
   return (
-    <>
+    <div>
       <SidebarStyles $isNavHover={isNavHover}>
         {isNavHover && <div className="aside-shadow"></div>}
         <div className="disney-logo">
@@ -82,7 +82,7 @@ const Sidebar = (props: ISidebarProps) => {
           </ul>
         </nav>
       </SidebarStyles>
-    </>
+    </div>
   );
 };
 

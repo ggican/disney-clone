@@ -3,18 +3,13 @@
 import { CheckOutlined, PlusOutlined } from "@ant-design/icons";
 import { useQuery } from "@tanstack/react-query";
 import moment from "moment";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 
 import Button from "@import/components/Button";
 import { useLandingPageContext } from "@import/providers/LandingPageProviders";
 import { getDetailService } from "@import/services/detail-service";
 
 import SeriesElementStyles from "./MoviesElement.styles";
-import SeriesSeason from "./SeriesSeasons";
-
-export const DEBOUNCE_DEFAULT_DELAY = 200;
 
 export default function MovieElement({ defaultData, id }: any) {
   const { onWishList, onGetDataById } = useLandingPageContext();

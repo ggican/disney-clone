@@ -15,8 +15,6 @@ type Story = StoryObj<typeof Sidebar>;
 
 export const SidebarDefault: Story = {
   args: {
-    image: <Image alt="image" fill style={{ objectFit: "cover" }} src="/disney.jpg" />,
     title: "",
-    video: "/video-disney.mp4",
   },
 };

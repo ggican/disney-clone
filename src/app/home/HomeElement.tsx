@@ -12,8 +12,6 @@ import { getTopRated, getTopRatedOfTheWeeks } from "@import/services/top-rated";
 
 import HomeElementStyles from "./HomeElement.styles";
 
-export const DEBOUNCE_DEFAULT_DELAY = 200;
-
 export default function HomeElement({ defaultData }: any) {
   const { onWishList, localWhishList, onCheckWatchList } = useLandingPageContext();
   const { data }: any = useQuery({

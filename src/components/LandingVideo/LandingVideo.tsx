@@ -36,7 +36,8 @@ const STUDIO_CARD = [
 const Video = ({ controls, autoPlay, height, src, muted }: ILandingVideoProps) => {
   return (
     <LandingVideoStyles height={height}>
-      <video controls={controls} autoPlay={autoPlay} muted={muted} src={src} />
+      <div className="parallax"></div>
+
       <div className="main">
         <div className="container">
           <div className="content-detail">
@@ -69,7 +70,7 @@ const Video = ({ controls, autoPlay, height, src, muted }: ILandingVideoProps) =
 
               <div className="right">
                 <Button color="secondary" block>
-                  +
+                  <PlusOutlined />
                 </Button>
               </div>
             </div>
