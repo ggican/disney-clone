@@ -38,3 +38,7 @@ NEXT_PUBLIC_BASE_API=https://api.themoviedb.org/3
 NEXT_PUBLIC_TOKEN=#
 NEXT_PUBLIC_IMAGE=https://image.tmdb.org/t/p/original
 ```
+
+## Example Unit Testing
+
+- explore page
