@@ -1,7 +1,9 @@
 import "./global.css";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 
+import { WebVitals } from "@import/components/web-vitals";
 import StyledComponentsRegistry from "@import/lib/registry";
 import { LandingPageProvider } from "@import/providers/LandingPageProviders";
 
@@ -36,9 +38,11 @@ export default function RootLayout({
           <StyledComponentsRegistry>
             <LandingPageProvider>
               <main>
+                <WebVitals></WebVitals>
                 <Sidebar></Sidebar>
                 {children}
                 <div id="portal-root"></div>
+                <Analytics />
               </main>
             </LandingPageProvider>
           </StyledComponentsRegistry>
